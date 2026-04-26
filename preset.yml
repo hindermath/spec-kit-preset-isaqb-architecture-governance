@@ -1,0 +1,113 @@
+schema_version: "1.0"
+
+preset:
+  id: "isaqb-architecture-governance"
+  name: "iSAQB Architecture Governance"
+  version: "0.1.0"
+  description: "Adds general iSAQB/CPSA-F and arc42 software-architecture governance, including architecture goals, views, quality scenarios, ADRs, risks, and technical debt."
+  author: "Thorsten Hindermann"
+  repository: "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.8.0"
+
+provides:
+  templates:
+    - type: "template"
+      name: "constitution-template"
+      file: "templates/constitution-addendum.md"
+      description: "Append general iSAQB/arc42 architecture-governance principles"
+      strategy: "append"
+
+    - type: "template"
+      name: "spec-template"
+      file: "templates/spec-addendum.md"
+      description: "Append architecture applicability and quality sections"
+      strategy: "append"
+
+    - type: "template"
+      name: "plan-template"
+      file: "templates/plan-addendum.md"
+      description: "Append iSAQB/arc42 architecture planning checks"
+      strategy: "append"
+
+    - type: "template"
+      name: "tasks-template"
+      file: "templates/tasks-addendum.md"
+      description: "Append architecture work-product and review tasks"
+      strategy: "append"
+
+    - type: "template"
+      name: "isaqb-architecture-agent-guidance-addendum-template"
+      file: "templates/agent-file-addendum.md"
+      description: "Standalone agent guidance addendum for iSAQB architecture governance"
+
+    - type: "template"
+      name: "architecture-vision-template"
+      file: "templates/architecture-vision-template.md"
+      description: "Starter architecture vision and goals document"
+
+    - type: "template"
+      name: "context-view-template"
+      file: "templates/context-view-template.md"
+      description: "Starter system context and external interfaces view"
+
+    - type: "template"
+      name: "building-block-view-template"
+      file: "templates/building-block-view-template.md"
+      description: "Starter building-block view aligned with arc42"
+
+    - type: "template"
+      name: "runtime-view-template"
+      file: "templates/runtime-view-template.md"
+      description: "Starter runtime scenarios and interaction flows"
+
+    - type: "template"
+      name: "deployment-view-template"
+      file: "templates/deployment-view-template.md"
+      description: "Starter deployment view for nodes, environments, and runtime dependencies"
+
+    - type: "template"
+      name: "quality-scenarios-template"
+      file: "templates/quality-scenarios-template.md"
+      description: "Starter iSAQB quality attribute scenarios"
+
+    - type: "template"
+      name: "architecture-decision-template"
+      file: "templates/architecture-decision-template.md"
+      description: "Starter Architecture Decision Record (ADR)"
+
+    - type: "template"
+      name: "architecture-risks-template"
+      file: "templates/architecture-risks-template.md"
+      description: "Starter architecture risks and technical debt record"
+
+    - type: "command"
+      name: "speckit.specify"
+      file: "commands/speckit.specify.md"
+      description: "Wrap specify with iSAQB architecture-governance checks"
+      strategy: "wrap"
+
+    - type: "command"
+      name: "speckit.plan"
+      file: "commands/speckit.plan.md"
+      description: "Wrap plan with iSAQB architecture-governance checks"
+      strategy: "wrap"
+
+    - type: "command"
+      name: "speckit.tasks"
+      file: "commands/speckit.tasks.md"
+      description: "Wrap tasks with iSAQB architecture-governance checks"
+      strategy: "wrap"
+
+tags:
+  - "architecture"
+  - "governance"
+  - "isaqb"
+  - "cpsa-f"
+  - "arc42"
+  - "adr"
+  - "quality-attributes"
+  - "architecture-views"
+  - "technical-debt"

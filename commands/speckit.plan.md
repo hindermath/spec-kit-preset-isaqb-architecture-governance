@@ -1,0 +1,13 @@
+Before continuing, apply the iSAQB Architecture Governance preset:
+
+- plan explicit architecture work products where the feature changes
+  structure, interfaces, quality attributes, runtime behavior, or
+  deployment
+- plan updates to architecture views under `docs/architecture/`
+- plan ADRs for architecturally significant decisions
+- plan risk and technical-debt review for trade-offs or unresolved
+  constraints
+- if security-relevant architecture is affected, also plan the
+  secure-architecture evidence from `architecture-governance`
+
+{CORE_TEMPLATE}
