@@ -14,3 +14,8 @@
   boundaries, threat modeling, Zero Trust, or security program maturity
   are involved, also apply `architecture-governance`.
 - Document every `N/A` decision with rationale.
+
+## Audit-Ready Spec-Kit Evidence
+
+- When this preset applies, generated or updated Markdown evidence must include the Spec-Kit run, owner/reviewer, evidence path, applicability decision, N/A rationale where relevant, and open follow-up tracking.
+- Do not treat an unfilled starter template as evidence. Evidence exists only after the current run has recorded concrete decisions, paths, and rationale.
