@@ -53,7 +53,7 @@ remain separate from secure architecture.*
 - Wrapper für `speckit.specify`, `speckit.plan` und `speckit.tasks`
 - Templates für Architecture Vision, Context View, Building Block View,
   Runtime View, Deployment View, Quality Scenarios, ADRs und Risiken
-- auditfähige Spec-Kit-Run-Evidence-Felder für Anwendbarkeit, N/A-Begründung,
+- auditfähige Spec-Kit-Run-Evidence-Felder für Anwendbarkeit, `N/A`-Begründung,
   Reviewer, Evidence-Pfad, Restrisiko und Follow-up
 
 *The preset provides addenda for the main Spec-Kit artifacts and agent
@@ -74,7 +74,7 @@ grants no repository, merge, deployment, or provider-administration authority.*
 
 ## Voraussetzungen / Prerequisites
 
-1. kompatible GitHub Spec Kit CLI;
+1. kompatible GitHub Spec-Kit CLI;
 2. gültige Spec-Kit-Integration im Ziel-Repository;
 3. versionierte Constitution und Agent-Guidance;
 4. geklärte Evidence-Orte, standardmäßig `docs/architecture/` und
@@ -82,7 +82,7 @@ grants no repository, merge, deployment, or provider-administration authority.*
 5. ein initiales Verständnis von Systemzweck, Stakeholdern, Kontext und
    Qualitätszielen.
 
-*Before installation, use a compatible GitHub Spec Kit CLI, a valid Spec-Kit
+*Before installation, use a compatible GitHub Spec-Kit CLI, a valid Spec-Kit
 integration, versioned constitution and agent guidance, clear evidence
 locations, and an initial understanding of system purpose, stakeholders,
 context, and quality goals.*
@@ -196,12 +196,12 @@ so, dass Zielgruppen Entscheidungen und Struktur nachvollziehen können.
 ## Version 0.2.0 / Version 0.2.0
 
 `v0.2.0` ergänzt auditfähige Spec-Kit-Run-Evidence-Felder, damit generierte
-Markdown-Dokumente und Checklisten Anwendbarkeit, N/A-Begründung, Reviewer,
+Markdown-Dokumente und Checklisten Anwendbarkeit, `N/A`-Begründung, Reviewer,
 Evidence-Pfad, Restrisiko und Follow-up pro standardsrelevantem Spec-Kit-Lauf
 aufzeichnen können.
 
 *`v0.2.0` adds audit-ready Spec-Kit run evidence fields so generated Markdown
-documents and checklists can record applicability, N/A rationale, reviewer,
+documents and checklists can record applicability, `N/A` rationale, reviewer,
 evidence path, residual risk, and follow-up per standards-relevant Spec-Kit
 run.*
 
