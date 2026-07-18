@@ -1,30 +1,130 @@
 # iSAQB Architecture Governance Preset
 
 Version: `0.2.0`
-Requires: `spec-kit >= 0.8.0` (uses the `wrap` and `append` composition
-strategies introduced in 0.8.x).
+Status: published, standard governance preset
+Priority: `30`
+Requires: Spec-Kit `>=0.8.0` (uses the `wrap` and `append` composition
+strategies introduced in `0.8.x`).
 
-Purpose:
+## Zweck / Purpose
 
-- add general software-architecture governance based on iSAQB/CPSA-F and
-  arc42 to Spec Kit workflows
-- make architecture goals, quality requirements, views, decisions, risks,
-  and technical debt explicit
-- keep general architecture work separate from secure-architecture
-  governance
+Dieses Standard-Preset bringt allgemeine Softwarearchitektur nach
+iSAQB/CPSA-F und arc42 in Spec-Kit-Workflows. Es macht Architekturziele,
+Kontext, Bausteine, Runtime View, Deployment View, Qualitätsanforderungen,
+ADRs, Risiken und technische Schulden sichtbar.
 
-Relationship to `architecture-governance`:
+*This standard preset injects general software architecture based on
+iSAQB/CPSA-F and arc42 into Spec-Kit workflows. It makes architecture goals,
+context, building blocks, runtime view, deployment view, quality requirements,
+ADRs, risks, and technical debt visible.*
 
-- `isaqb-architecture-governance` covers general software architecture:
-  architecture goals, context, building blocks, runtime view, deployment
-  view, quality scenarios, architecture decisions, risks, and technical
-  debt.
-- `architecture-governance` covers secure architecture: trust boundaries,
-  threat modeling, STRIDE/CAPEC, Zero Trust, S-ADRs, and OWASP SAMM.
-- If security-relevant architecture is in scope, use both presets
-  together.
+Das Qualitätsziel ist ein verständliches Architekturmodell, das
+Implementierungsentscheidungen begründet und über einzelne Tasks hinaus
+wartbar bleibt. Sichere Architektur im engeren Sinn bleibt Aufgabe von
+`architecture-governance`.
 
-Standards and concepts in scope:
+*The quality goal is an understandable architecture model that explains
+implementation decisions and remains maintainable beyond individual tasks.
+Secure architecture in the narrower sense remains the responsibility of
+`architecture-governance`.*
+
+## Zielgruppen / Audience
+
+Dieses Preset eignet sich, wenn:
+
+- Architekturentscheidungen Wartbarkeit, Erweiterbarkeit, Betrieb,
+  Integration oder Qualitätsattribute prägen;
+- Teams leichte arc42/iSAQB-Artefakte ohne schweres Dokumentationsprogramm
+  nutzen möchten;
+- Lernende und neue Maintainer Systemstruktur und Begründungen nachvollziehen
+  sollen;
+- allgemeine Architekturarbeit getrennt von Security-Architektur geführt
+  werden soll.
+
+*Use this preset when architecture decisions shape maintainability,
+extensibility, operations, integration, or quality attributes; when teams want
+lightweight arc42/iSAQB artifacts; when learners and new maintainers should
+understand system structure and reasoning; and when general architecture should
+remain separate from secure architecture.*
+
+## Lieferumfang / What It Provides
+
+- Addenda für Constitution, Spec, Plan, Tasks und Agent-Guidance
+- Wrapper für `speckit.specify`, `speckit.plan` und `speckit.tasks`
+- Templates für Architecture Vision, Context View, Building Block View,
+  Runtime View, Deployment View, Quality Scenarios, ADRs und Risiken
+- auditfähige Spec-Kit-Run-Evidence-Felder für Anwendbarkeit, `N/A`-Begründung,
+  Reviewer, Evidence-Pfad, Restrisiko und Follow-up
+
+*The preset provides addenda for the main Spec-Kit artifacts and agent
+guidance, wraps the normal Specify/Plan/Tasks flow, and supplies templates for
+architecture vision, context view, building-block view, runtime view,
+deployment view, quality scenarios, ADRs, and risks.*
+
+## Nicht enthalten / What It Does Not Provide
+
+Das Preset entscheidet keine Architektur, erzeugt keine Diagramme
+automatisch, validiert keine vollständige arc42-Dokumentation und ersetzt
+keine Architekturreview. Es erteilt keine Repository-, Merge-, Deployment-
+oder Provider-Administrationsrechte.
+
+*The preset does not decide architecture, create diagrams automatically,
+validate complete arc42 documentation, or replace architecture review. It
+grants no repository, merge, deployment, or provider-administration authority.*
+
+## Voraussetzungen / Prerequisites
+
+1. kompatible GitHub Spec-Kit CLI;
+2. gültige Spec-Kit-Integration im Ziel-Repository;
+3. versionierte Constitution und Agent-Guidance;
+4. geklärte Evidence-Orte, standardmäßig `docs/architecture/` und
+   `docs/architecture/adr/`;
+5. ein initiales Verständnis von Systemzweck, Stakeholdern, Kontext und
+   Qualitätszielen.
+
+*Before installation, use a compatible GitHub Spec-Kit CLI, a valid Spec-Kit
+integration, versioned constitution and agent guidance, clear evidence
+locations, and an initial understanding of system purpose, stakeholders,
+context, and quality goals.*
+
+## Installation / Installation
+
+### Veröffentlichter Tag / Published Tag
+
+```bash
+specify preset add \
+  --from https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.0.zip \
+  --priority 30
+specify preset info isaqb-architecture-governance
+```
+
+### Entwicklungs-Checkout / Development Checkout
+
+```bash
+specify preset add --dev /path/to/isaqb-architecture-governance --priority 30
+specify preset info isaqb-architecture-governance
+```
+
+### Empfohlene Kombination / Recommended Composition
+
+| Priority | Preset |
+|---:|---|
+| 10 | `security-governance` |
+| 20 | `architecture-governance` |
+| 30 | `isaqb-architecture-governance` |
+| 40 | `a11y-governance` |
+| 50 | `cross-platform-governance` |
+| 60 | `agent-parity-governance` |
+
+`isaqb-architecture-governance` behandelt allgemeine Architektur.
+`architecture-governance` behandelt sichere Architektur. Wenn beide Flächen
+relevant sind, werden beide Presets zusammen genutzt.
+
+*`isaqb-architecture-governance` covers general architecture.
+`architecture-governance` covers secure architecture. Use both presets when
+both surfaces are relevant.*
+
+## Standards und Konzepte / Standards and Concepts
 
 - `iSAQB CPSA-F` architecture work products and method discipline
 - `arc42` structure beyond Section 8
@@ -34,25 +134,21 @@ Standards and concepts in scope:
 - runtime scenarios
 - deployment view
 - quality attribute scenarios
-- Architecture Decision Records (ADRs)
+- Architecture Decision Records (`ADRs`)
 - architecture risks and technical debt
 
-Preset strategy:
+## Preset-Strategie / Preset Strategy
 
-- append general architecture-governance sections to
-  `constitution-template`, `spec-template`, `plan-template`, and
-  `tasks-template`
-- provide a standalone agent-guidance addendum template for projects that
-  maintain agent instruction files
-- wrap `speckit.specify`, `speckit.plan`, and `speckit.tasks` with a
-  shared iSAQB/arc42 architecture workflow
-- provide starter templates for architecture vision, context view,
-  building-block view, runtime view, deployment view, quality scenarios,
-  ADRs, and architecture risks
+- allgemeine Architektur-Governance an `constitution-template`,
+  `spec-template`, `plan-template` und `tasks-template` anhängen
+- ein eigenständiges Agent-Guidance-Addendum bereitstellen
+- `speckit.specify`, `speckit.plan` und `speckit.tasks` mit einem
+  iSAQB/arc42-Workflow umhüllen
+- Starter-Templates für Architekturvision, Kontext, Bausteine, Runtime,
+  Deployment, Qualitätsszenarien, ADRs und Risiken liefern
 
-Evidence templates included:
+## Evidenzvorlagen / Evidence Templates
 
-- Spec-Kit run evidence fields are embedded in the evidence templates to support audit-ready applicability, N/A rationale, reviewer, and follow-up records.
 - `architecture-vision-template`
 - `context-view-template`
 - `building-block-view-template`
@@ -65,26 +161,58 @@ Evidence templates included:
 Default evidence location: `docs/architecture/`. ADRs default to
 `docs/architecture/adr/` as one file per decision.
 
-When to use:
+## Prüfung / Verification
 
-- projects where architecture decisions affect maintainability,
-  extensibility, operations, integration, or quality attributes
-- teams that want lightweight arc42/iSAQB work products without adopting
-  a large documentation process
-- systems whose design should be understandable beyond the immediate
-  implementation tasks
+```bash
+specify preset list
+specify preset info isaqb-architecture-governance
+specify preset resolve
+specify check
+```
 
-When not to use:
+Prüfe zusätzlich, ob Architektur-Evidence entweder vorhanden oder im Plan als
+zu erzeugendes Artefakt benannt ist.
 
-- tiny scripts or throwaway prototypes with no meaningful architecture
-  surface
-- projects that only need secure-architecture prompts; use
-  `architecture-governance` instead or in combination
+*Also verify that architecture evidence already exists or is named in the plan
+as work to create.*
 
-Release notes:
+## Fehlersuche / Troubleshooting
 
-- `v0.2.0` adds audit-ready Spec-Kit run evidence fields so generated Markdown documents and checklists can record applicability, N/A rationale, reviewer, evidence path, residual risk, and follow-up per standards-relevant Spec-Kit run.
+### Architektur bleibt task-nah / Architecture Stays Task-Level
 
-Recommended standalone install priority:
+Ergänze Kontext, Bausteine, Runtime- oder Deployment-Sicht, sobald einzelne
+Tasks ohne Systembild nicht mehr sinnvoll bewertbar sind.
 
-- `15`
+### Security-Architektur fehlt / Secure Architecture Is Missing
+
+Nutze zusätzlich `architecture-governance`, wenn Trust Boundaries, Threat
+Modeling, STRIDE/CAPEC, Zero Trust oder S-ADRs relevant sind.
+
+### Diagramme fehlen / Diagrams Are Missing
+
+Dieses Preset erzwingt keine Diagrammform. Halte Text, Tabellen oder Diagramme
+so, dass Zielgruppen Entscheidungen und Struktur nachvollziehen können.
+
+## Version 0.2.0 / Version 0.2.0
+
+`v0.2.0` ergänzt auditfähige Spec-Kit-Run-Evidence-Felder, damit generierte
+Markdown-Dokumente und Checklisten Anwendbarkeit, `N/A`-Begründung, Reviewer,
+Evidence-Pfad, Restrisiko und Follow-up pro standardsrelevantem Spec-Kit-Lauf
+aufzeichnen können.
+
+*`v0.2.0` adds audit-ready Spec-Kit run evidence fields so generated Markdown
+documents and checklists can record applicability, `N/A` rationale, reviewer,
+evidence path, residual risk, and follow-up per standards-relevant Spec-Kit
+run.*
+
+## Kompatibilitäts- und Sicherheitsübersicht / Compatibility and Safety Summary
+
+- kompatibel mit Spec-Kit `>=0.8.0`
+- priorisiert als Stufe `30`
+- ergänzt, aber ersetzt nicht sichere Architektur-Governance
+- keine automatische Diagramm-, Review-, Remote- oder Provider-Aktion
+- Architekturentscheidungen bleiben projektbezogene Evidence
+
+## License
+
+MIT. See `LICENSE`.
