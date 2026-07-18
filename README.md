@@ -1,10 +1,12 @@
 # iSAQB Architecture Governance Preset
 
 Version: `0.2.0`
-Requires: `spec-kit >= 0.8.0` (uses the `wrap` and `append` composition
-strategies introduced in 0.8.x).
+Status: published, standard governance preset
+Priority: `30`
+Requires: Spec Kit `>=0.8.0` (uses the `wrap` and `append` composition
+strategies introduced in 0.8.x)
 
-Purpose:
+## Purpose / Zweck
 
 - add general software-architecture governance based on iSAQB/CPSA-F and
   arc42 to Spec Kit workflows
@@ -12,6 +14,20 @@ Purpose:
   and technical debt explicit
 - keep general architecture work separate from secure-architecture
   governance
+
+## Install
+
+```bash
+specify preset add \
+  --from https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.0.zip \
+  --priority 30
+specify preset info isaqb-architecture-governance
+```
+
+```bash
+specify preset add --dev /path/to/isaqb-architecture-governance --priority 30
+specify preset info isaqb-architecture-governance
+```
 
 Relationship to `architecture-governance`:
 
@@ -80,6 +96,15 @@ When not to use:
   surface
 - projects that only need secure-architecture prompts; use
   `architecture-governance` instead or in combination
+
+## Safety / Grenzen
+
+- Installation adds general architecture prompts and evidence templates; it
+  does not decide architecture, create diagrams, or validate arc42 completeness
+  by itself.
+- Architecture decisions and N/A records remain project-owned evidence.
+- The preset does not grant repository, remote, merge, deployment, or
+  provider-administration authority.
 
 Release notes:
 
