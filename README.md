@@ -1,6 +1,6 @@
 # iSAQB Architecture Governance Preset
 
-Version: `0.2.0`
+Version: `0.2.1`
 Status: published, standard governance preset
 Priority: `30`
 Requires: Spec-Kit `>=0.8.0` (uses the `wrap` and `append` composition
@@ -93,7 +93,7 @@ context, and quality goals.*
 
 ```bash
 specify preset add \
-  --from https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.0.zip \
+  --from https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.1.zip \
   --priority 30
 specify preset info isaqb-architecture-governance
 ```
@@ -192,6 +192,14 @@ Modeling, STRIDE/CAPEC, Zero Trust oder S-ADRs relevant sind.
 
 Dieses Preset erzwingt keine Diagrammform. Halte Text, Tabellen oder Diagramme
 so, dass Zielgruppen Entscheidungen und Struktur nachvollziehen können.
+
+## Version 0.2.1 / Version 0.2.1
+
+`v0.2.1` ergänzt Qualitätsszenarien für Teilfehler, Unterbrechung,
+Wiederaufnahme, idempotente Wiederholung und gestapelte Abhängigkeiten.
+
+*`v0.2.1` adds quality scenarios for partial failure, interruption, resume,
+idempotent retry, and stacked dependencies.*
 
 ## Version 0.2.0 / Version 0.2.0
 

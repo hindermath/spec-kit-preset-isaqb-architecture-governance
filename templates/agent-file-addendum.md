@@ -14,6 +14,13 @@
   boundaries, threat modeling, Zero Trust, or security program maturity
   are involved, also apply `architecture-governance`.
 - Document every `N/A` decision with rationale.
+- Add concrete quality scenarios for partial failure, interruption, resume,
+  idempotent retry, and state reconstruction when orchestration or remote
+  delivery is architecturally significant.
+- Model direct and stacked dependency structures explicitly. Re-evaluate
+  affected runtime and building-block views when a dependency base changes.
+- Record why the selected state and event model can distinguish completed,
+  pending, failed, and `NeedsRevalidation` operations after process loss.
 
 ## Audit-Ready Spec-Kit Evidence
 
