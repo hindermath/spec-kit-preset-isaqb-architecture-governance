@@ -195,8 +195,8 @@ so, dass Zielgruppen Entscheidungen und Struktur nachvollziehen können.
 
 ## Version 0.2.1 / Version 0.2.1
 
-`v0.2.1` ergaenzt Qualitaetsszenarien fuer Teilfehler, Unterbrechung,
-Wiederaufnahme, idempotente Wiederholung und gestapelte Abhaengigkeiten.
+`v0.2.1` ergänzt Qualitätsszenarien für Teilfehler, Unterbrechung,
+Wiederaufnahme, idempotente Wiederholung und gestapelte Abhängigkeiten.
 
 *`v0.2.1` adds quality scenarios for partial failure, interruption, resume,
 idempotent retry, and stacked dependencies.*
