@@ -3,7 +3,7 @@ schema_version: "1.0"
 preset:
   id: "isaqb-architecture-governance"
   name: "iSAQB Architecture Governance"
-  version: "0.2.1"
+  version: "0.2.2"
   description: "Adds general iSAQB/CPSA-F and arc42 software-architecture governance, including audit-ready Spec-Kit run evidence for architecture goals, views, resumability and partial-failure quality scenarios, ADRs, risks, and technical debt."
   author: "Thorsten Hindermann"
   repository: "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance"
@@ -14,6 +14,11 @@ requires:
 
 provides:
   templates:
+    - type: "template"
+      name: "isaqb-architecture-governance-model-routing"
+      file: "model-routing.json"
+      description: "Agent-neutral command-to-role routing contract"
+
     - type: "template"
       name: "constitution-template"
       file: "templates/constitution-addendum.md"

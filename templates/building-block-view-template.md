@@ -40,7 +40,7 @@
 
 ## Coupling and Cohesion Notes
 
-- 
+
 
 ## Architecture Decisions
 
