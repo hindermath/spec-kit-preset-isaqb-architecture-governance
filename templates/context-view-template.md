@@ -46,5 +46,3 @@
 | | | |
 
 ## Open Questions
-
-- 
