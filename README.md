@@ -1,6 +1,13 @@
 # iSAQB Architecture Governance Preset
 
-Version: `0.2.2`
+Patch **0.2.3** liefert die verbesserte zweisprachige Einstiegs- und
+Kompositionsdokumentation. Verhalten und Berechtigungsgrenzen bleiben erhalten.
+[Release-Nachweis / Release record](docs/release-0.2.3-validation.md).
+
+*Patch 0.2.3 packages the improved bilingual getting-started and composition
+guide. Behavior and authority boundaries remain unchanged.*
+
+Version: `0.2.3`
 Status: published, standard governance preset
 Priority: `30`
 Requires: Spec-Kit `>=0.8.0` (uses the `wrap` and `append` composition
@@ -143,7 +150,7 @@ below with your actual checkout path.*
 ### Veröffentlichter Tag / Published Tag
 
 ```bash
-specify preset add --from https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.2.zip --priority 30
+specify preset add --from https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.3.zip --priority 30
 specify preset info isaqb-architecture-governance
 ```
 
