@@ -1,14 +1,23 @@
 # iSAQB Architecture Governance Preset
 
-Patch **0.2.3** liefert die verbesserte zweisprachige Einstiegs- und
-Kompositionsdokumentation. Verhalten und Berechtigungsgrenzen bleiben erhalten.
-[Release-Nachweis / Release record](docs/release-0.2.3-validation.md).
+<!-- current-package: 0.2.4 -->
 
-*Patch 0.2.3 packages the improved bilingual getting-started and composition
+**Leserpfad / Reader path:** [Deutsch: Einstieg, Begriffe und Fehlerhilfe](docs/user-guide.md) · [English: start, terms and troubleshooting](docs/user-guide.EN.md).
+
+Quellkandidat **v0.2.4**. Der [Release-Stand](https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/releases) wird getrennt geprüft; ein Commit auf main ist noch keine Veröffentlichung oder Installation.
+
+*Source candidate v0.2.4. The release page records actual publication separately; a main-branch commit is not publication or installation.*
+
+
+Patch **0.2.4** liefert die verbesserte zweisprachige Einstiegs- und
+Kompositionsdokumentation. Verhalten und Berechtigungsgrenzen bleiben erhalten.
+[Release-Nachweis / Release record](docs/release-0.2.4-validation.md).
+
+*Patch 0.2.4 packages the improved bilingual getting-started and composition
 guide. Behavior and authority boundaries remain unchanged.*
 
-Version: `0.2.3`
-Status: published, standard governance preset
+Version: `0.2.4`
+Status: Quellkandidat zur Sichtung / source candidate for review
 Priority: `30`
 Requires: Spec-Kit `>=0.8.0` (uses the `wrap` and `append` composition
 strategies introduced in `0.8.x`).
@@ -150,7 +159,7 @@ below with your actual checkout path.*
 ### Veröffentlichter Tag / Published Tag
 
 ```bash
-specify preset add --from https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.3.zip --priority 30
+specify preset add --from https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.4.zip --priority 30
 specify preset info isaqb-architecture-governance
 ```
 
@@ -205,7 +214,7 @@ starters and the agent-guidance addendum are separately available. Registering
 the addendum does not prove that every agent file incorporates it.*
 
 **Automatisch sind die eingebundenen Anweisungen, nicht die fertigen
-Architekturdokumente.** v0.2.2 enthält keine feste Zuordnung
+Architekturdokumente.** Seit v0.2.2 unverändert: Es gibt keine feste Zuordnung
 „Feature-Typ → Starter“, keinen automatischen Kopierlauf nach
 `docs/architecture/` und keinen eigenständigen Architektur-Validator.
 Der Agent beurteilt den Kontext; sein Verhalten ist keine deterministische
@@ -213,7 +222,7 @@ Vorlagenauswahl. Nenne relevante Starter und Zielpfade ausdrücklich und prüfe
 das Ergebnis. Installation startet weder ein Feature noch Review oder Umsetzung.
 
 ***The instructions are integrated automatically, not completed architecture
-documents.*** v0.2.2 has no fixed feature-to-starter mapping, automatic copying
+documents.*** Unchanged since v0.2.2: there is no fixed feature-to-starter mapping, automatic copying
 into `docs/architecture/`, or standalone architecture validator. The agent
 interprets context; this is not deterministic starter selection. Explicitly
 name relevant starters and output paths, then inspect the result. Installation
