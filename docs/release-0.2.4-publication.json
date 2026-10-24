@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "presetId": "isaqb-architecture-governance",
+  "version": "0.2.4",
+  "repository": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance",
+  "candidate_status": "HistoricalCandidate",
+  "release_status": "Published",
+  "tag": "v0.2.4",
+  "tagCommit": "1f5529d289b90c4c302e267c14d9bccab96d5e99",
+  "verifiedAt": "2026-10-24T10:55:26.8058950+00:00",
+  "release": {
+    "id": 422326289,
+    "url": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/releases/tag/v0.2.4",
+    "publishedAt": "2026-10-23T21:29:30.0000000+00:00",
+    "preRelease": false,
+    "draft": false
+  },
+  "archive": {
+    "sha256": "ad9802cb23ea2ef604098bea1b0e297cbaf0badcd56ba87541706d45910605ba",
+    "url": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.4.zip",
+    "status": "Verified",
+    "verifiedAt": "2026-10-24T10:55:26.8058950+00:00",
+    "bytes": 53657
+  },
+  "evidenceComplete": true,
+  "historicalDocumentSha256": "12fd54e7004d7cd1b509f39ad7976a765015e092b61ebb1de062d0e422c921a7",
+  "comparison": {
+    "fromTag": "v0.2.2",
+    "toTag": "v0.2.4",
+    "toCommit": "1f5529d289b90c4c302e267c14d9bccab96d5e99",
+    "url": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/compare/55431d0059946a978ea6c3a5f0c866f187117378...1f5529d289b90c4c302e267c14d9bccab96d5e99",
+    "fromCommit": "55431d0059946a978ea6c3a5f0c866f187117378"
+  },
+  "improvements": [
+    {
+      "introducedIn": "v0.2.3",
+      "type": "DocumentationUsability",
+      "sourcePaths": [
+        "README.md"
+      ],
+      "problem": {
+        "de": "Automatische Ergänzungen und bewusst auszuwählende Starter waren schwer auseinanderzuhalten.",
+        "en": "Automatic addenda and explicitly selected starters were hard to distinguish."
+      },
+      "description": {
+        "de": "Acht Architektur-Starter, der Ablauf Specify–Plan–Tasks und ein Beispiel asynchroner Verarbeitung werden erklärt; Kombination und Prioritäten sind sichtbar.",
+        "en": "Eight architecture starters, Specify–Plan–Tasks and an asynchronous-processing example are explained; composition and priorities are visible."
+      },
+      "benefit": {
+        "de": "Lernende wählen eine passende Vorlage ausdrücklich, statt automatische Vorlagenauswahl oder Architekturabnahme zu erwarten.",
+        "en": "Learners explicitly choose a suitable starter rather than expecting automatic template selection or architecture acceptance."
+      },
+      "commit": "c63f9867769c70b1858d0280f3b3d88adf333f9f"
+    },
+    {
+      "introducedIn": "v0.2.4",
+      "type": "DocumentationUsability",
+      "sourcePaths": [
+        "docs/user-guide.md",
+        "docs/user-guide.EN.md",
+        "tests/test-documentation-closeout.ps1"
+      ],
+      "problem": {
+        "de": "Ein kurzer README-Einstieg erklärte die vollständigen Leserpfade und Grenzen noch nicht gleichwertig.",
+        "en": "The short README entry did not yet explain the complete reader journey and limits equally."
+      },
+      "description": {
+        "de": "Deutsch-/Englisch-Leitfäden, Command-/Vorlagen-Erklärungen und Dokumentationsregressionen wurden ergänzt. Frühere Einstiegsverbesserungen und der letzte Patch werden getrennt ausgewiesen.",
+        "en": "German/English guides, command/template explanations and documentation regressions were added. Earlier entry-point improvements and the final patch are reported separately."
+      },
+      "benefit": {
+        "de": "Lernende finden Voraussetzungen, Beispiel, Ergebnis und Fehlerhilfe. Neue Textklarheit ist keine neue Runtime-Funktion oder menschliche Abnahme.",
+        "en": "Learners can find prerequisites, an example, its result and troubleshooting. Clearer text is not a new runtime feature or human acceptance."
+      },
+      "commit": "1f5529d289b90c4c302e267c14d9bccab96d5e99"
+    }
+  ],
+  "historicalValidation": {
+    "checks": [
+      {
+        "name": "Reader paths (ubuntu-24.04)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/actions/runs/39992122373/job/120546223489",
+        "startedAt": "2026-10-23T17:05:06Z",
+        "completedAt": "2026-10-23T17:05:16Z",
+        "head": "af8c3d3f105a4189787a1f0649f2a6f463e00215"
+      },
+      {
+        "name": "Reader paths (windows-2022)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/actions/runs/39992122373/job/120546223408",
+        "startedAt": "2026-10-23T17:05:06Z",
+        "completedAt": "2026-10-23T17:05:17Z",
+        "head": "af8c3d3f105a4189787a1f0649f2a6f463e00215"
+      },
+      {
+        "name": "Reader paths (macos-15)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/actions/runs/39992122373/job/120546223139",
+        "startedAt": "2026-10-23T17:05:07Z",
+        "completedAt": "2026-10-23T17:05:16Z",
+        "head": "af8c3d3f105a4189787a1f0649f2a6f463e00215"
+      }
+    ],
+    "pr": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/pull/7",
+    "mergeCommit": "1f5529d289b90c4c302e267c14d9bccab96d5e99",
+    "reviewedHead": "af8c3d3f105a4189787a1f0649f2a6f463e00215"
+  },
+  "newDocumentationReview": "Pending exact-head human review; no merge or publication authority.",
+  "boundary": "Documentation source only; no new package, runtime behavior, approval, installation, catalog update or cancelled dynamic routing."
+}
