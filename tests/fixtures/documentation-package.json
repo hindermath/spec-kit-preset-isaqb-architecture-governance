@@ -1,6 +1,6 @@
 {
   "id": "isaqb-architecture-governance",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "priority": 30,
   "readers": [
     "docs/user-guide.md",
@@ -8,5 +8,6 @@
     "docs/documentation-closeout.md"
   ],
   "sourceBaseCommit": "c63f9867769c70b1858d0280f3b3d88adf333f9f",
-  "preserveHistoricalEvidence": true
+  "preserveHistoricalEvidence": true,
+  "publicationEvidenceVersion": "0.2.4"
 }
