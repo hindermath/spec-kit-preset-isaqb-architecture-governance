@@ -1,0 +1,14 @@
+{
+  "release_status": "NotEstablishedAtPreparation",
+  "candidate_status": "Prepared",
+  "packageVersion": "0.2.5",
+  "presetId": "isaqb-architecture-governance",
+  "externalPublicationEvidence": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/releases/tag/v0.2.5",
+  "documentationPr": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/pull/8",
+  "schemaVersion": 1,
+  "historicalPublicationVersion": "0.2.4",
+  "runtimeChanged": false,
+  "generatorSchemaChanged": false,
+  "preparedAt": "2026-10-24T12:50:04.9599770+00:00",
+  "sourceCommit": "0aea935d822bb9504aba4ed8315a829db2cec9ef"
+}
