@@ -1,6 +1,6 @@
 {
   "id": "isaqb-architecture-governance",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "priority": 30,
   "readers": [
     "docs/user-guide.md",
