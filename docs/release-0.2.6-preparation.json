@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "presetId": "isaqb-architecture-governance",
+  "packageVersion": "0.2.6",
+  "historicalPublicationVersion": "0.2.4",
+  "candidate_status": "Prepared",
+  "release_status": "NotEstablishedAtPreparation",
+  "sourceCommit": "3d07dc9d6c123e30416189aaf3764766bf10a0f8",
+  "previousReleaseVersion": "0.2.5",
+  "externalPublicationEvidence": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/releases/tag/v0.2.6",
+  "runtimeChanged": false,
+  "generatorSchemaChanged": false,
+  "changeKind": "SecurityPolicyDocumentation",
+  "authorizationReference": "Thorsten Hindermann, 2026-11-13: implement security baseline and publish current presets, including controlled Level-0/Home/Level-2 rollout; MergeAndSync with formal-review-only Admin-Bypass.",
+  "preparedAt": "2026-11-13T08:24:34.7871860+00:00"
+}
